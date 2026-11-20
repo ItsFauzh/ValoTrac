@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><b>⬇ Download for Windows / 下載</b></a> ·
+  <a href="../../releases/latest"><b>⬇ Download v1.0.0 for Windows / 下載</b></a> ·
   <a href="https://itsfauzh.github.io/ValoTrac/">Website / 網站</a> ·
   <a href="https://itsfauzh.github.io/ValoTrac/privacy.html">Privacy / 隱私權</a>
 </p>
@@ -40,6 +40,32 @@
   <img src="docs/img/shot-app.png" width="720" alt="ValoTrac settings">
 </p>
 
+## How it works / 運作方式
+
+ValoTrac uses **Riot Sign On (RSO)**: players sign in on Riot's official page and explicitly opt in before any data is read. The API key and RSO secret are kept on a Cloudflare Worker, never inside the app.
+ValoTrac 使用 **Riot Sign On（RSO）**：玩家在 Riot 官方頁面登入並同意後，才會讀取資料。API 金鑰與 RSO 密鑰保管在 Cloudflare Worker，不會放進程式裡。
+
+```
+ValoTrac (PC app)  ──HTTPS──▶  Cloudflare Worker (API key · RSO secret)  ──▶  Riot API
+   "Sign in with Riot"              exchanges RSO code                          VAL-MATCH-V1
+                                    calls API for the signed-in player only      ACCOUNT-V1 /accounts/me
+                                    stores nothing                               VAL-CONTENT-V1
+```
+
+1. **Sign in / 登入**: click “Sign in with Riot” in ValoTrac. / 在 ValoTrac 按「使用 Riot 登入」。
+2. **Opt in / 同意授權**: approve access on Riot's official page. / 在 Riot 官方頁面同意。
+3. **Fetch / 查詢**: the Worker calls the official API for the signed-in player only. / Worker 只為登入的玩家本人呼叫官方 API。
+4. **Update / 更新**: after each competitive match, the player's own rank card updates. / 每場競技對戰後，玩家自己的段位卡自動更新。
+
+| API | Use / 用途 |
+|---|---|
+| RSO (OAuth 2.0) | Player sign-in and consent / 玩家登入與授權 |
+| ACCOUNT-V1 `/accounts/me` | Identify the signed-in player / 確認登入的玩家 |
+| VAL-MATCH-V1 | The player's own recent matches / 玩家自己的近期對戰 |
+| VAL-CONTENT-V1 | Act and content names / 賽季與內容名稱 |
+
+**Status / 目前進度**: the Cloudflare Worker and VAL-CONTENT-V1 integration are live. RSO sign-in and VAL-MATCH-V1 will be enabled once production access is granted.
+Cloudflare Worker 與 VAL-CONTENT-V1 已上線；RSO 登入與 VAL-MATCH-V1 會在取得正式權限後啟用。
 ## Install / 安裝
 
 1. Download **`ValoTrac-Setup.exe`** from [Releases](../../releases/latest).
