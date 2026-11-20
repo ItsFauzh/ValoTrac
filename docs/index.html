@@ -145,7 +145,7 @@
   <div class="wrap">
     <img class="logo" src="img/icon.png" alt="ValoTrac">
     <h1>Valo<span>Trac</span></h1>
-    <p class="tagline" data-en="Track your own VALORANT rank. Your rank card animates after every match.">追蹤你自己的 VALORANT 段位，打完一場，段位卡自己會動。</p>
+    <p class="tagline" data-en="Your rank card animates after every match.">打完一場，段位卡自己會動。</p>
     <div class="cta">
       <a class="dl" data-gh="download" href="#">
         <svg viewBox="0 0 24 24"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
@@ -172,7 +172,7 @@
       <div class="feat"><div class="n">_01</div><h3 data-en="Rank card">段位卡</h3><p data-en="Shows your current tier, RR and today's wins, losses and net RR. Add it to OBS or show it on your screen.">即時顯示你的段位、RR、本日勝敗與淨 RR。可以放進 OBS，也可以直接顯示在螢幕上。</p></div>
       <div class="feat"><div class="n">_02</div><h3 data-en="RR animations">上分動畫</h3><p data-en="Gains, losses, rank-ups and rank-downs each get their own animation, about 30 seconds after the match ends.">上分、掉分、升段、降段都有專屬動畫，比賽結束約 30 秒內自動更新。</p></div>
       <div class="feat"><div class="n">_03</div><h3 data-en="Hold Tab to show">按 Tab 顯示</h3><p data-en="Keep the card on screen all the time, or only while holding Tab. Clicks pass straight through it.">段位卡可以一直顯示，或只在按住 Tab 時出現；滑鼠會直接穿透，不影響操作。</p></div>
-      <div class="feat"><div class="n">_04</div><h3 data-en="Only your own data">只看你自己</h3><p data-en="ValoTrac only shows your own rank and match results. It never looks up or displays other players.">ValoTrac 只顯示你自己的段位與戰績，不會查詢或顯示其他玩家的資料。</p></div>
+      <div class="feat"><div class="n">_04</div><h3 data-en="Match ranks">查看段位</h3><p data-en="Optional: during agent select and the match, see each player's agent, rank and season win rate or RR. No player names are shown.">選用功能：選角與對戰中看到雙方每個人的英雄、段位、本季勝率或 RR，不顯示任何玩家名字。</p></div>
       <div class="feat"><div class="n">_05</div><h3 data-en="Never asks for your password">不會要你的密碼</h3><p data-en="ValoTrac never asks for or stores your Riot password.">ValoTrac 不會要求、也不會儲存你的 Riot 帳號密碼。</p></div>
       <div class="feat"><div class="n">_06</div><h3 data-en="Easy install">好安裝</h3><p data-en="One-click installer, no admin rights needed. Optional start with Windows; uninstall any time from Windows Settings.">一鍵安裝，不需要系統管理員權限；可設定開機自動啟動，隨時從 Windows 設定解除安裝。</p></div>
     </div>
@@ -205,18 +205,27 @@
     </div>
 
     <div class="show">
+      <div class="media"><img src="img/shot-panel.png" alt="In-game panel: agents, ranks and win rates of both teams" loading="lazy"></div>
+      <div class="txt">
+        <div class="n" data-en="_03 MATCH RANKS">_03 查看段位</div>
+        <h3 data-en="Know the lobby&lt;br&gt;from agent select.">選角時就知道，<br>這場對手什麼水準。</h3>
+        <p data-en="Allies on the left, enemies on the right: agent, rank and season win rate (green ≥ 55%, red &lt; 45%). You can switch the number to each player's RR.">左邊隊友、右邊敵人，顯示英雄、段位，以及本季勝率（綠色 ≥ 55%、紅色 &lt; 45%）。也可以切換成顯示每個人的 RR。</p>
+        <p data-en="Shows agents and ranks only, &lt;b&gt;never player names&lt;/b&gt;. Clicks pass straight through it.">只顯示英雄與段位，<b>不顯示任何玩家名字</b>；滑鼠會直接穿透，不影響操作。</p>
+      </div>
+    </div>
+    <div class="show rev">
       <div class="media"><img src="img/shot-app.png" alt="ValoTrac settings window" loading="lazy"></div>
       <div class="txt">
-        <div class="n" data-en="_03 SETTINGS">_03 設定介面</div>
+        <div class="n" data-en="_04 SETTINGS">_04 設定介面</div>
         <h3 data-en="Everything in&lt;br&gt;one window.">所有東西，<br>都在一個視窗裡調。</h3>
         <p data-en="Live preview on the left, styling on the right. Your rank, RR and today's record are shown underneath.">左邊即時預覽，右邊調外觀；下方顯示你目前的段位、RR 與本日戰績。</p>
       </div>
     </div>
 
-    <div class="show rev">
+    <div class="show">
       <div class="media plain"><img src="img/shot-setup.png" alt="ValoTrac installer" loading="lazy"></div>
       <div class="txt">
-        <div class="n" data-en="_04 INSTALL">_04 安裝</div>
+        <div class="n" data-en="_05 INSTALL">_05 安裝</div>
         <h3 data-en="One click&lt;br&gt;and you're done.">按一下，<br>就裝好了。</h3>
         <p data-en="No admin rights needed. Optionally add a desktop shortcut and start with Windows. To update, just run the new installer.">不需要系統管理員權限。可以勾選桌面捷徑、開機自動啟動；之後出新版，直接執行新的安裝檔就能更新。</p>
       </div>
@@ -230,9 +239,9 @@
     <h2 data-en="Your data stays on your PC.">你的資料只留在你的電腦。</h2>
     <p class="lead" data-en="ValoTrac is a fan-made, non-commercial project. Here's exactly what it does.">ValoTrac 是玩家自製的非商業專案，以下是它做什麼、不做什麼。</p>
     <ul class="checks">
-      <li><div><b data-en="Only your own account">只讀取你自己的帳號</b><span data-en="Your Riot ID, competitive tier, RR and RR change from recent competitive matches.">你的 Riot ID、競技段位、RR，以及最近競技對戰的 RR 變化。</span></div></li>
+      <li><div><b data-en="What it reads">讀取哪些資料</b><span data-en="Your own tier, RR and recent RR changes. If you turn on match ranks, also the agent, rank and season win rate of players in your current match (never names).">你自己的段位、RR 與最近的 RR 變化；開啟「查看段位」時，另外讀取同場玩家的英雄、段位與本季勝率（不含名字）。</span></div></li>
       <li><div><b data-en="Stored locally">只存在本機</b><span data-en="Settings and session stats are saved on your PC. There is no ValoTrac server or account.">設定與戰績只存在你的電腦，沒有 ValoTrac 伺服器，也不需要註冊帳號。</span></div></li>
-      <li><div><b data-en="No game advantage">不影響遊戲公平性</b><span data-en="It never reads game memory, modifies game files, or shows information about other players.">不讀取遊戲記憶體、不修改遊戲檔案，也不顯示任何其他玩家的資訊。</span></div></li>
+      <li><div><b data-en="Doesn't touch the game">不碰遊戲本體</b><span data-en="It never reads game memory or modifies game files.">不讀取遊戲記憶體，也不修改任何遊戲檔案。</span></div></li>
       <li><div><b data-en="Free, no ads, no tracking">免費、無廣告、無追蹤</b><span data-en="No ads, no analytics, no data sold or shared.">沒有廣告、沒有使用分析，也不會販售或分享任何資料。</span></div></li>
     </ul>
     <p class="lead" style="margin:0" data-en="Read the full &lt;a class=&quot;textlink&quot; href=&quot;privacy.html&quot;&gt;Privacy Policy&lt;/a&gt; and &lt;a class=&quot;textlink&quot; href=&quot;terms.html&quot;&gt;Terms of Use&lt;/a&gt;.">完整內容請看<a class="textlink" href="privacy.html">隱私權政策</a>與<a class="textlink" href="terms.html">使用條款</a>。</p>
