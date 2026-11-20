@@ -28,7 +28,7 @@
 | 🎴 | **Rank card**: current tier, RR, today's wins / losses and net RR. Add it to OBS or show it on screen. | **段位卡**：即時顯示段位、RR、本日勝敗與淨 RR，可放進 OBS 或直接顯示在螢幕上。 |
 | ✨ | **Animations**: win, loss, rank-up and rank-down animations about 30 seconds after each match. | **上分動畫**：上分、掉分、升段、降段都有專屬動畫，比賽結束約 30 秒內自動更新。 |
 | ⌨️ | **Hold Tab to show**: always visible, or only while holding Tab. Clicks pass straight through. | **按 Tab 顯示**：一直顯示或按住 Tab 才出現，滑鼠直接穿透。 |
-| 📊 | **Match ranks** (optional, off by default): agents, ranks and season win rate or RR of both teams. No player names. | **查看段位**（選用，預設關閉）：選角與對戰中顯示雙方英雄、段位、勝率或 RR，不顯示玩家名字。 |
+| 👤 | **Only your own data**: never looks up or shows other players. | **只看你自己**：不會查詢或顯示其他玩家的資料。 |
 | 🌐 | **English / 中文** interface. | **中英文介面**。 |
 | 🔒 | Never asks for your Riot password. Settings and stats stay on your PC. | 不需要帳號密碼，設定與戰績只存在你的電腦。 |
 
@@ -55,14 +55,14 @@ Requirements / 需求：Windows 10 / 11.
 
 ## Data & privacy / 資料與隱私
 
-- Reads your own tier, RR and recent RR changes. If *Match ranks* is turned on, also the agent, rank and win rate of players in your current match (never names).
-  讀取你自己的段位、RR 與最近的 RR 變化；開啟「查看段位」時，另外讀取同場玩家的英雄、段位與勝率（不含名字）。
+- Reads only your own tier, RR and recent RR changes. Never looks up other players.
+  只讀取你自己的段位、RR 與最近的 RR 變化，不會查詢其他玩家。
 - Settings and stats are stored locally in `%LOCALAPPDATA%\ValoTrac`. No accounts, ads or analytics.
   設定與戰績只存在本機 `%LOCALAPPDATA%\ValoTrac`，沒有帳號、廣告或使用分析。
 - Never reads game memory or modifies game files.
   不讀取遊戲記憶體，也不修改任何遊戲檔案。
-- Riot official API calls go through a Cloudflare Worker ([`worker/`](worker)) that holds the API key, so the key is never inside the app. Only your Riot ID is sent, and the Worker doesn't store it. You can turn this off in Settings → General.
-  官方 API 透過 Cloudflare Worker（[`worker/`](worker)）連線，金鑰保管在 Worker，不會放進程式裡。只會送出你的 Riot ID，Worker 不會儲存。可以在「一般設定」關閉。
+- Riot official API calls go through a Cloudflare Worker ([`worker/`](worker)) that holds the API key, so the key is never inside the app. No player data is sent to it. You can turn this off in Settings → General.
+  官方 API 透過 Cloudflare Worker（[`worker/`](worker)）連線，金鑰保管在 Worker，不會放進程式裡。不會送出任何玩家資料。可以在「一般設定」關閉。
 
 Full policy / 完整內容：[Privacy Policy](https://itsfauzh.github.io/ValoTrac/privacy.html) · [Terms of Use](https://itsfauzh.github.io/ValoTrac/terms.html)
 

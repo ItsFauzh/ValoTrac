@@ -25,17 +25,16 @@
   &lt;ul&gt;
     &lt;li&gt;&lt;b&gt;Account identity:&lt;/b&gt; your Riot ID (name and tag), PUUID and region, so the app knows whose rank to show.&lt;/li&gt;
     &lt;li&gt;&lt;b&gt;Competitive data:&lt;/b&gt; your current tier, RR, and the RR change and result of your recent competitive matches.&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Match ranks (optional, off by default):&lt;/b&gt; when you turn it on, the agent, rank, RR and season win rate of players in your current match. Player names are never shown or stored, and this data is discarded after the match.&lt;/li&gt;
     &lt;li&gt;&lt;b&gt;App settings:&lt;/b&gt; card appearance, position, startup options and today's session stats (wins, losses, net RR).&lt;/li&gt;
   &lt;/ul&gt;
-  &lt;p&gt;The app &lt;b&gt;does not&lt;/b&gt; ask for or store your Riot password.&lt;/p&gt;
+  &lt;p&gt;The app &lt;b&gt;does not&lt;/b&gt; ask for or store your Riot password, and it does not look up or display data about other players.&lt;/p&gt;
 
   &lt;h2&gt;2. Where your data is stored&lt;/h2&gt;
   &lt;p&gt;Your settings and stats are stored only on your computer, in &lt;code&gt;%LOCALAPPDATA%\ValoTrac&lt;/code&gt;. There are no accounts, ads, analytics or tracking.&lt;/p&gt;
 
   &lt;h2&gt;3. Services the app connects to&lt;/h2&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;b&gt;ValoTrac API server (Cloudflare Worker):&lt;/b&gt; when “Use the Riot official API” is on (default), the app sends your Riot ID (name and tag) to a small server run by the developer on Cloudflare. It forwards the request to the Riot official API with the developer's API key and returns the result. It does not store or log your data. You can turn this off in Settings → General.&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;ValoTrac API server (Cloudflare Worker):&lt;/b&gt; a small server run by the developer on Cloudflare that holds the Riot API key, so the key is never inside the app. It is currently used only to load public game content (such as the current act); no player data is sent to it. You can turn it off in Settings → General.&lt;/li&gt;
     &lt;li&gt;&lt;b&gt;Riot Games:&lt;/b&gt; to get your rank and match data. Riot's handling of data is covered by the &lt;a href=&quot;https://www.riotgames.com/en/privacy-notice&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Riot Privacy Notice&lt;/a&gt;.&lt;/li&gt;
     &lt;li&gt;&lt;b&gt;valorant-api.com:&lt;/b&gt; to download public game assets such as rank icons and names. No personal data is sent.&lt;/li&gt;
     &lt;li&gt;&lt;b&gt;GitHub:&lt;/b&gt; hosts this website and the installer downloads. GitHub may log basic request data under its own privacy statement.&lt;/li&gt;
@@ -59,17 +58,16 @@
   <ul>
     <li><b>帳號識別：</b>你的 Riot ID（名稱與標籤）、PUUID 與伺服器地區，用來知道要顯示誰的段位。</li>
     <li><b>競技資料：</b>你目前的段位、RR，以及最近競技對戰的勝負與 RR 變化。</li>
-    <li><b>查看段位（選用，預設關閉）：</b>開啟後，讀取同場玩家的英雄、段位、RR 與本季勝率。不顯示也不儲存任何玩家名字，比賽結束後即丟棄。</li>
     <li><b>程式設定：</b>段位卡外觀、位置、啟動選項，以及本日戰績（勝、敗、淨 RR）。</li>
   </ul>
-  <p>本程式<b>不會</b>要求或儲存你的 Riot 密碼。</p>
+  <p>本程式<b>不會</b>要求或儲存你的 Riot 密碼，也不會查詢或顯示其他玩家的資料。</p>
 
   <h2>2. 資料存放位置</h2>
   <p>你的設定與戰績只存在你的電腦（<code>%LOCALAPPDATA%\ValoTrac</code>）。沒有帳號註冊、廣告、使用分析或追蹤。</p>
 
   <h2>3. 本程式會連線的服務</h2>
   <ul>
-    <li><b>ValoTrac API 伺服器（Cloudflare Worker）：</b>開啟「使用 Riot 官方 API」時（預設開啟），程式會把你的 Riot ID（名稱與標籤）送到開發者架在 Cloudflare 上的小伺服器，由它帶著開發者的 API 金鑰向 Riot 官方 API 查詢後回傳。伺服器不會儲存或記錄你的資料。可以在「一般設定」關閉。</li>
+    <li><b>ValoTrac API 伺服器（Cloudflare Worker）：</b>開發者架在 Cloudflare 上的小伺服器，用來保管 Riot API 金鑰，金鑰不會放在程式裡。目前只用來讀取公開的遊戲內容（例如目前賽季），不會送出任何玩家資料。可以在「一般設定」關閉。</li>
     <li><b>Riot Games：</b>取得段位與對戰資料。Riot 如何處理資料請見 <a href="https://www.riotgames.com/zh-tw/privacy-notice" target="_blank" rel="noopener">Riot 隱私權聲明</a>。</li>
     <li><b>valorant-api.com：</b>下載公開的遊戲素材，例如段位圖示與名稱，不會傳送任何個人資料。</li>
     <li><b>GitHub：</b>架設本網站與提供安裝檔下載，GitHub 可能依其隱私權聲明記錄基本連線資料。</li>
@@ -92,6 +90,6 @@
 <footer><div class="wrap">
   <p class="legal">ValoTrac isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
 </div></footer>
-<script src="site.js"></script>
+<script src="site.js?v=1.0.0"></script>
 </body>
 </html>
