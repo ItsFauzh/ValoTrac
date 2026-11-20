@@ -1,7 +1,7 @@
 // ValoTrac 網站共用腳本：GitHub 連結、版本號／下載次數、中英切換
 (function () {
   // ↓↓↓ 改成你的 GitHub 帳號與專案名稱（只要改這裡）↓↓↓
-  var GH_USER = "Fauzh";
+  var GH_USER = "ItsFauzh";
   var GH_REPO = "ValoTrac";
   var ASSET = "ValoTrac-Setup.exe";
   // ↑↑↑
