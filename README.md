@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="../../releases/latest"><b>⬇ Download for Windows / 下載</b></a> ·
-  <a href="https://fauzh.github.io/ValoTrac/">Website / 網站</a> ·
-  <a href="https://fauzh.github.io/ValoTrac/privacy.html">Privacy / 隱私權</a>
+  <a href="https://itsfauzh.github.io/ValoTrac/">Website / 網站</a> ·
+  <a href="https://itsfauzh.github.io/ValoTrac/privacy.html">Privacy / 隱私權</a>
 </p>
 
 <p align="center">
@@ -64,7 +64,7 @@ Requirements / 需求：Windows 10 / 11.
 - Riot official API calls go through a Cloudflare Worker ([`worker/`](worker)) that holds the API key, so the key is never inside the app. Only your Riot ID is sent, and the Worker doesn't store it. You can turn this off in Settings → General.
   官方 API 透過 Cloudflare Worker（[`worker/`](worker)）連線，金鑰保管在 Worker，不會放進程式裡。只會送出你的 Riot ID，Worker 不會儲存。可以在「一般設定」關閉。
 
-Full policy / 完整內容：[Privacy Policy](https://fauzh.github.io/ValoTrac/privacy.html) · [Terms of Use](https://fauzh.github.io/ValoTrac/terms.html)
+Full policy / 完整內容：[Privacy Policy](https://itsfauzh.github.io/ValoTrac/privacy.html) · [Terms of Use](https://itsfauzh.github.io/ValoTrac/terms.html)
 
 ## Feedback / 回報問題
 
